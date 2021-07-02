@@ -3,6 +3,8 @@
 
 *** THIS REPOSITORY IS ARCHIVED ***
 
+View web application: https://better2learn-bcc78.web.app/
+
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
