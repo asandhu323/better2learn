@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Better2Learn</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+
+    <!-- Optional styles and scripts of your own -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="styles/bottom-nav.css" rel="stylesheet" />
+    <link href="styles/gradebook-styles/gradebook.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  </head>
+
+  <body>
+
+    <!-------------------------------------->
+    <!-- The following is HTML for layout -->
+    <!-------------------------------------->
+
+    <!-- Header Navigation Bar -->
+
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="container-fluid d-flex flex-row">
+        <div class="justify-content-start">
+          <a href="index.html" class="nav-link">
+            <i class="material-icons align-middle px-3 justify-content-start">dashboard</i>
+          </a>
+        </div>
+        <span class="align-middle fs-3">BetterToLearn</span>
+        <div class="dropdown dropstart ">
+          <a class="nav-link justify-content-end" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="material-icons">menu</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" id="logout" href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- END of Header Navigation Bar -->
+
+    <!-- Page Contents -->
+
+    <div id="white-header">
+      <div class="container p-3 d-flex flex-column align-items-center">
+        <h1 class="fs-1">Gradebook</h1>
+      </div>
+
+      <div>
+        <ul id="course-container">
+          <li>
+            <p id="course-comp1100" onclick="comp1100()">COMP 1100</p>
+          </li>
+          <li>
+            <p id="course-comp1113" onclick="comp1113()">COMP 1113</p>
+          </li>
+          <li>
+            <p id="course-comm1116" onclick="comm1116()">COMM 1116</p>
+          </li>
+          <li>
+            <p id="course-comp1510" onclick="comp1510()">COMP 1510</p>
+          </li>
+          <li>
+            <p id="course-comp1537" onclick="comp1537()">COMP 1537</p>
+          </li>
+          <li>
+            <p id="course-comp1712" onclick="comp1712()">COMP 1712</p>
+          </li>
+          <li>
+            <p id="course-comp1800" onclick="comp1800()">COMP 1800</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="comp1100" class="course">
+        <div class="accordion">
+          <h3><a href="#">Journals</a></h3>
+          <div>
+            <p>Journal 1<span class="grade" id="c1100j1"><button type="button" id="setc1100j1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j1g"
+                  type="text"></input></span></p>
+            <p>Journal 2<span class="grade" id="c1100j2"><button type="button" id="setc1100j2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j2g"
+                  type="text"></input></span></p>
+            <p>Journal 3<span class="grade" id="c1100j3"><button type="button" id="setc1100j3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j3g"
+                  type="text"></input></span></p>
+            <p>Journal 4<span class="grade" id="c1100j4"><button type="button" id="setc1100j4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j4g"
+                  type="text"></input></span></p>
+            <p>Journal 5<span class="grade" id="c1100j5"><button type="button" id="setc1100j5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j5g"
+                  type="text"></input></span></p>
+            <p>Journal 8<span class="grade" id="c1100j8"><button type="button" id="setc1100j8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j8g"
+                  type="text"></input></span></p>
+            <p>Journal 9<span class="grade" id="c1100j9"><button type="button" id="setc1100j9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j9g"
+                  type="text"></input></span></p>
+            <p>Journal 11<span class="grade" id="c1100j11"><button type="button" id="setc1100j11"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j11g"
+                  type="text"></input></span></p>
+            <p>Journal 12<span class="grade" id="c1100j12"><button type="button" id="setc1100j12"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1100j12g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="comp1113" class="course">
+        <div class="accordion">
+          <h3><a href="#">Quizzes</a></h3>
+          <div>
+            <p>Quiz 1<span class="grade" id="c1113q1"><button type="button" id="setc1113q1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /23</span><input id="c1113q1g"
+                  type="text"></input></span></p>
+            <p>Quiz 2<span class="grade" id="c1113q2"><button type="button" id="setc1113q2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1113q2g"
+                  type="text"></input></span></p>
+            <p>Quiz 3<span class="grade" id="c1113q3"><button type="button" id="setc1113q3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /18</span><input id="c1113q3g"
+                  type="text"></input></span></p>
+            <p>Quiz 4<span class="grade" id="c1113q4"><button type="button" id="setc1113q4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /13</span><input id="c1113q4g"
+                  type="text"></input></span></p>
+            <p>Quiz 5<span class="grade" id="c1113q5"><button type="button" id="setc1113q5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1113q5g"
+                  type="text"></input></span></p>
+            <p>Quiz 6<span class="grade" id="c1113q6"><button type="button" id="setc1113q6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1113q6g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Assignments</a></h3>
+          <div>
+            <p>Assignment 1<span class="grade" id="c1113a1"><button type="button" id="setc1113a1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /21</span><input id="c1113a1g"
+                  type="text"></input></span></p>
+            <p>Assignment 2<span class="grade" id="c1113a2"><button type="button" id="setc1113a2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /36</span><input id="c1113a2g"
+                  type="text"></input></span></p>
+            <p>Assignment 3<span class="grade" id="c1113a3"><button type="button" id="setc1113a3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /34</span><input id="c1113a3g"
+                  type="text"></input></span></p>
+            <p>Assignment 4<span class="grade" id="c1113a4"><button type="button" id="setc1113a4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /27</span><input id="c1113a4g"
+                  type="text"></input></span></p>
+            <p>Assignment 5<span class="grade" id="c1113a5"><button type="button" id="setc1113a5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /27</span><input id="c1113a5g"
+                  type="text"></input></span></p>
+            <p>Assignment 6<span class="grade" id="c1113a6"><button type="button" id="setc1113a6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /26</span><input id="c1113a6g"
+                  type="text"></input></span></p>
+            <p>Assignment 7<span class="grade" id="c1113a7"><button type="button" id="setc1113a7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /27</span><input id="c1113a7g"
+                  type="text"></input></span></p>
+            <p>Assignment 8<span class="grade" id="c1113a8"><button type="button" id="setc1113a8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /15</span><input id="c1113a8g"
+                  type="text"></input></span></p>
+            <p>Assignment 9<span class="grade" id="c1113a9"><button type="button" id="setc1113a9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1113a9g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Exams</a></h3>
+          <div>
+            <p>Midterm Exam<span class="grade" id="c1113e1"><button type="button" id="setc1113e1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /27</span><input id="c1113e1g"
+                  type="text"></input></span></p>
+            <p>Final Exam<span class="grade" id="c1113e2"><button type="button" id="setc1113e2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /30</span><input id="c1113e2g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="comm1116" class="course">
+        <div class="accordion">
+          <h3><a href="#">Chapter Quizzes</a></h3>
+          <div>
+            <p>Chapter 1<span class="grade" id="c1116q1"><button type="button" id="setc1116q1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /24</span><input id="c1116q1g"
+                  type="text"></input></span></p>
+            <p>Chapter 2<span class="grade" id="c1116q2"><button type="button" id="setc1116q2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /24</span><input id="c1116q2g"
+                  type="text"></input></span></p>
+            <p>Chapter 3<span class="grade" id="c1116q3"><button type="button" id="setc1116q3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /23</span><input id="c1116q3g"
+                  type="text"></input></span></p>
+            <p>Chapter 4<span class="grade" id="c1116q4"><button type="button" id="setc1116q4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /24</span><input id="c1116q4g"
+                  type="text"></input></span></p>
+            <p>Chapter 5<span class="grade" id="c1116q5"><button type="button" id="setc1116q5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /24</span><input id="c1116q5g"
+                  type="text"></input></span></p>
+            <p>Chapter 6<span class="grade" id="c1116q6"><button type="button" id="setc1116q6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /22</span><input id="c1116q6g"
+                  type="text"></input></span></p>
+            <p>Chapter 7<span class="grade" id="c1116q7"><button type="button" id="setc1116q7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /27</span><input id="c1116q7g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Chapter Discussions</a></h3>
+          <div>
+            <p>Chapter 1<span class="grade" id="c1116d1"><button type="button" id="setc1116d1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d1g"
+                  type="text"></input></span></p>
+            <p>Chapter 2<span class="grade" id="c1116d2"><button type="button" id="setc1116d2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d2g"
+                  type="text"></input></span></p>
+            <p>Chapter 3<span class="grade" id="c1116d3"><button type="button" id="setc1116d3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d3g"
+                  type="text"></input></span></p>
+            <p>Chapter 4<span class="grade" id="c1116d4"><button type="button" id="setc1116d4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d4g"
+                  type="text"></input></span></p>
+            <p>Chapter 5<span class="grade" id="c1116d5"><button type="button" id="setc1116d5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d5g"
+                  type="text"></input></span></p>
+            <p>Chapter 6<span class="grade" id="c1116d6"><button type="button" id="setc1116d6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d6g"
+                  type="text"></input></span></p>
+            <p>Chapter 7<span class="grade" id="c1116d7"><button type="button" id="setc1116d7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1116d7g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Midterm Exam</a></h3>
+          <div>
+            <p>Midterm Exam<span class="grade" id="c1116e"><button type="button" id="setc1116e"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /100</span><input id="c1116eg"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Informal Report</a></h3>
+          <div>
+            <p>Informal Report<span class="grade" id="c1116ir"><button type="button" id="setc1116ir"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /100</span><input id="c1116irg"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Oral Presentation</a></h3>
+          <div>
+            <p>Oral Presentation<span class="grade" id="c1116op"><button type="button" id="setc1116op"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1116opg"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="comp1510" class="course">
+        <div class="accordion">
+          <h3><a href="#">Quizzes</a></h3>
+          <div>
+            <p>Quiz 1<span class="grade" id="c1510q1"><button type="button" id="setc1510q1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q1g"
+                  type="text"></input></span></p>
+            <p>Quiz 2<span class="grade" id="c1510q2"><button type="button" id="setc1510q2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q2g"
+                  type="text"></input></span></p>
+            <p>Quiz 3<span class="grade" id="c1510q3"><button type="button" id="setc1510q3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q3g"
+                  type="text"></input></span></p>
+            <p>Quiz 4<span class="grade" id="c1510q4"><button type="button" id="setc1510q4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q4g"
+                  type="text"></input></span></p>
+            <p>Quiz 5<span class="grade" id="c1510q5"><button type="button" id="setc1510q5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q5g"
+                  type="text"></input></span></p>
+            <p>Quiz 6<span class="grade" id="c1510q6"><button type="button" id="setc1510q6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q6g"
+                  type="text"></input></span></p>
+            <p>Quiz 7<span class="grade" id="c1510q7"><button type="button" id="setc1510q7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q7g"
+                  type="text"></input></span></p>
+            <p>Quiz 8<span class="grade" id="c1510q8"><button type="button" id="setc1510q8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q8g"
+                  type="text"></input></span></p>
+            <p>Quiz 9<span class="grade" id="c1510q9"><button type="button" id="setc1510q9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q9g"
+                  type="text"></input></span></p>
+            <p>Quiz 10<span class="grade" id="c1510q10"><button type="button" id="setc1510q10"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q10g"
+                  type="text"></input></span></p>
+            <p>Quiz 11<span class="grade" id="c1510q11"><button type="button" id="setc1510q11"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510q11g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Labs</a></h3>
+          <div>
+            <p>Lab 1<span class="grade" id="c1510l1"><button type="button" id="setc1510l1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l1g"
+                  type="text"></input></span></p>
+            <p>Lab 2<span class="grade" id="c1510l2"><button type="button" id="setc1510l2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l2g"
+                  type="text"></input></span></p>
+            <p>Lab 3<span class="grade" id="c1510l3"><button type="button" id="setc1510l3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l3g"
+                  type="text"></input></span></p>
+            <p>Lab 4<span class="grade" id="c1510l4"><button type="button" id="setc1510l4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l4g"
+                  type="text"></input></span></p>
+            <p>Lab 5<span class="grade" id="c1510l5"><button type="button" id="setc1510l5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l5g"
+                  type="text"></input></span></p>
+            <p>Lab 6<span class="grade" id="c1510l6"><button type="button" id="setc1510l6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l6g"
+                  type="text"></input></span></p>
+            <p>Lab 7<span class="grade" id="c1510l7"><button type="button" id="setc1510l7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l7g"
+                  type="text"></input></span></p>
+            <p>Lab 8<span class="grade" id="c1510l8"><button type="button" id="setc1510l8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l8g"
+                  type="text"></input></span></p>
+            <p>Lab 9<span class="grade" id="c1510l9"><button type="button" id="setc1510l9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l9g"
+                  type="text"></input></span></p>
+            <p>Lab 10<span class="grade" id="c1510l10"><button type="button" id="setc1510l10"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l10g"
+                  type="text"></input></span></p>
+            <p>Lab 11<span class="grade" id="c1510l11"><button type="button" id="setc1510l11"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1510l11g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Assignments</a></h3>
+          <div>
+            <p>Assignment 1<span class="grade" id="c1510a1"><button type="button" id="setc1510a1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /50</span><input id="c1510a1g"
+                  type="text"></input></span></p>
+            <p>Assignment 2<span class="grade" id="c1510a2"><button type="button" id="setc1510a2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /50</span><input id="c1510a2g"
+                  type="text"></input></span></p>
+            <p>Assignment 3<span class="grade" id="c1510a3"><button type="button" id="setc1510a3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /40</span><input id="c1510a3g"
+                  type="text"></input></span></p>
+            <p>Assignment 4<span class="grade" id="c1510a4"><button type="button" id="setc1510a4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /30</span><input id="c1510a4g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Exams</a></h3>
+          <div>
+            <p>Midterm Exam<span class="grade" id="c1510e1"><button type="button" id="setc1510e1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /70</span><input id="c1510e1g"
+                  type="text"></input></span></p>
+            <p>Final Exam<span class="grade" id="c1510e2"><button type="button" id="setc1510e2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /70</span><input id="c1510e2g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="comp1537" class="course">
+        <div class="accordion">
+          <h3><a href="#">Labs</a></h3>
+          <div>
+            <p>Lab 1<span class="grade" id="c1537l1"><button type="button" id="setc1537l1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l1g"
+                  type="text"></input></span></p>
+            <p>Lab 2<span class="grade" id="c1537l2"><button type="button" id="setc1537l2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l2g"
+                  type="text"></input></span></p>
+            <p>Lab 3<span class="grade" id="c1537l3"><button type="button" id="setc1537l3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l3g"
+                  type="text"></input></span></p>
+            <p>Lab 4<span class="grade" id="c1537l4"><button type="button" id="setc1537l4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l4g"
+                  type="text"></input></span></p>
+            <p>Lab 5<span class="grade" id="c1537l5"><button type="button" id="setc1537l5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l5g"
+                  type="text"></input></span></p>
+            <p>Lab 6<span class="grade" id="c1537l6"><button type="button" id="setc1537l6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l6g"
+                  type="text"></input></span></p>
+            <p>Lab 7<span class="grade" id="c1537l7"><button type="button" id="setc1537l7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l7g"
+                  type="text"></input></span></p>
+            <p>Lab 8<span class="grade" id="c1537l8"><button type="button" id="setc1537l8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l8g"
+                  type="text"></input></span></p>
+            <p>Lab 9<span class="grade" id="c1537l9"><button type="button" id="setc1537l9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l9g"
+                  type="text"></input></span></p>
+            <p>Lab 10<span class="grade" id="c1537l10"><button type="button" id="setc1537l10"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1537l10g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Exams</a></h3>
+          <div>
+            <p>Midterm Exam<span class="grade" id="c1537e1"><button type="button" id="setc1537e1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /47</span><input id="c1537e1g"
+                  type="text"></input></span></p>
+            <p>Final Exam<span class="grade" id="c1537e2"><button type="button" id="setc1537e2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /50</span><input id="c1537e2g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="comp1712" class="course">
+        <div class="accordion">
+          <h3><a href="#">Quizzes</a></h3>
+          <div>
+            <p>Quiz 1<span class="grade" id="c1712q1"><button type="button" id="setc1712q1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1712q1g"
+                  type="text"></input></span></p>
+            <p>Quiz 2<span class="grade" id="c1712q2"><button type="button" id="setc1712q2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1712q2g"
+                  type="text"></input></span></p>
+            <p>Quiz 3<span class="grade" id="c1712q3"><button type="button" id="setc1712q3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1712q3g"
+                  type="text"></input></span></p>
+            <p>Quiz 4<span class="grade" id="c1712q4"><button type="button" id="setc1712q4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1712q4g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Assignments</a></h3>
+          <div>
+            <p>SDLC Minicase<span class="grade" id="c1712a1"><button type="button" id="setc1712a1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1712a1g"
+                  type="text"></input></span></p>
+            <p>Clarifying Vision Minicase<span class="grade" id="c1712a2"><button type="button" id="setc1712a2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1712a2g"
+                  type="text"></input></span></p>
+            <p>Systems Request<span class="grade" id="c1712a3"><button type="button" id="setc1712a3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /24</span><input id="c1712a3g"
+                  type="text"></input></span></p>
+            <p>Business Process Model-First Draft<span class="grade" id="c1712a4"><button type="button" id="setc1712a4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /1</span><input id="c1712a4g"
+                  type="text"></input></span></p>
+            <p>Business Process Model-Second Draft<span class="grade" id="c1712a5"><button type="button" id="setc1712a5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /12</span><input id="c1712a5g"
+                  type="text"></input></span></p>
+            <p>Data Flow Diagram<span class="grade" id="c1712a6"><button type="button" id="setc1712a6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1712a6g"
+                  type="text"></input></span></p>
+            <p>Use Case Analysis<span class="grade" id="c1712a7"><button type="button" id="setc1712a7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1712a7g"
+                  type="text"></input></span></p>
+            <p>Present Value Analysis<span class="grade" id="c1712a8"><button type="button" id="setc1712a8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1712a8g"
+                  type="text"></input></span></p>
+            <p>8 Golden Rules<span class="grade" id="c1712a9"><button type="button" id="setc1712a9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1712a9g"
+                  type="text"></input></span></p>
+            <p>Entity Relationship Diagram<span class="grade" id="c1712a10"><button type="button" id="setc1712a10"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /20</span><input id="c1712a10g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Exams</a></h3>
+          <div>
+            <p>Midterm Exam<span class="grade" id="c1712e1"><button type="button" id="setc1712e1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /45</span><input id="c1712e1g"
+                  type="text"></input></span></p>
+            <p>Final Exam<span class="grade" id="c1712e2"><button type="button" id="setc1712e2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /50</span><input id="c1712e2g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="comp1800" class="course">
+        <div class="accordion">
+          <h3><a href="#">Individual Assignments</a></h3>
+          <div>
+            <p>Miro Assignment<span class="grade" id="c1800ia1"><button type="button" id="setc1800ia1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1800ia1g"
+                  type="text"></input></span></p>
+            <p>Webpage Re-design<span class="grade" id="c1800ia2"><button type="button" id="setc1800ia2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ia2g"
+                  type="text"></input></span></p>
+            <p>Content Wireframe<span class="grade" id="c1800ia3"><button type="button" id="setc1800ia3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ia3g"
+                  type="text"></input></span></p>
+            <p>Tech Mini 1<span class="grade" id="c1800ia4"><button type="button" id="setc1800ia4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ia4g"
+                  type="text"></input></span></p>
+            <p>Tech Mini 2<span class="grade" id="c1800ia5"><button type="button" id="setc1800ia5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ia5g"
+                  type="text"></input></span></p>
+            <p>Tech Mini 3<span class="grade" id="c1800ia6"><button type="button" id="setc1800ia6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ia6g"
+                  type="text"></input></span></p>
+            <p>Tech Mini 4<span class="grade" id="c1800ia7"><button type="button" id="setc1800ia7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ia7g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Team Assignments</a></h3>
+          <div>
+            <p>Preliminary Pitch<span class="grade" id="c1800ta1"><button type="button" id="setc1800ta1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta1g"
+                  type="text"></input></span></p>
+            <p>UX Survey<span class="grade" id="c1800ta2"><button type="button" id="setc1800ta2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta2g"
+                  type="text"></input></span></p>
+            <p>Persona, User Story, Task-flow<span class="grade" id="c1800ta3"><button type="button" id="setc1800ta3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta3g"
+                  type="text"></input></span></p>
+            <p>Test Report<span class="grade" id="c1800ta4"><button type="button" id="setc1800ta4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta4g"
+                  type="text"></input></span></p>
+            <p>Github and Centralized Workflow<span class="grade" id="c1800ta5"><button type="button" id="setc1800ta5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta5g"
+                  type="text"></input></span></p>
+            <p>Sprint 1<span class="grade" id="c1800ta6"><button type="button" id="setc1800ta6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta6g"
+                  type="text"></input></span></p>
+            <p>Sprint 2<span class="grade" id="c1800ta7"><button type="button" id="setc1800ta7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta7g"
+                  type="text"></input></span></p>
+            <p>Sprint 3<span class="grade" id="c1800ta8"><button type="button" id="setc1800ta8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta8g"
+                  type="text"></input></span></p>
+            <p>Sprint 4<span class="grade" id="c1800ta9"><button type="button" id="setc1800ta9"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /10</span><input id="c1800ta9g"
+                  type="text"></input></span></p>
+            <p>Project Pitch Presentation<span class="grade" id="c1800ta10"><button type="button" id="setc1800ta10"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /100</span><input
+                  id="c1800ta10g" type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Active Learning Assessments</a></h3>
+          <div>
+            <p>Lecture Quiz 1<span class="grade" id="c1800ala1"><button type="button" id="setc1800ala1"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ala1g"
+                  type="text"></input></span></p>
+            <p>Lecture Quiz 2<span class="grade" id="c1800ala2"><button type="button" id="setc1800ala2"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ala2g"
+                  type="text"></input></span></p>
+            <p>Pre-Lecture Quiz 1<span class="grade" id="c1800ala3"><button type="button" id="setc1800ala3"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1800ala3g"
+                  type="text"></input></span></p>
+            <p>Pre-Lecture Quiz 2<span class="grade" id="c1800ala4"><button type="button" id="setc1800ala4"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1800ala4g"
+                  type="text"></input></span></p>
+            <p>Pre-Lecture Quiz 3<span class="grade" id="c1800ala5"><button type="button" id="setc1800ala5"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1800ala5g"
+                  type="text"></input></span></p>
+            <p>Pre-Lecture Quiz 4<span class="grade" id="c1800ala6"><button type="button" id="setc1800ala6"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1800ala6g"
+                  type="text"></input></span></p>
+            <p>Pre-Lecture Quiz 5<span class="grade" id="c1800ala7"><button type="button" id="setc1800ala7"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /5</span><input id="c1800ala7g"
+                  type="text"></input></span></p>
+            <p>Midterm Self-Assessment<span class="grade" id="c1800ala8"><button type="button" id="setc1800ala8"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /3</span><input id="c1800ala8g"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+        <div class="accordion">
+          <h3><a href="#">Final Project</a></h3>
+          <div>
+            <p>Final Project<span class="grade" id="c1800fp"><button type="button" id="setc1800fp"
+                  class="btn btn-outline-primary right">Set</button><span class="score"> /30</span><input id="c1800fpg"
+                  type="text"></input></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END of Page Contents -->
+
+    <!-- Footer Navigation Bar -->
+
+    <div id="bottom-nav">
+      <div id="home">
+        <a class="bn-link" href="main.html">
+          <div class="holder">
+            <span class="material-icons">home</span></br>
+            <p class="bn-p">Home</p>
+          </div>
+        </a>
+      </div>
+      <div id="calendar">
+        <a class="bn-link" href="schedule.html">
+          <div class="holder">
+            <span class="material-icons">calendar_today</span></br>
+            <p class="bn-p">Schedule</p>
+          </div>
+        </a>
+      </div>
+      <div id="tracker">
+        <a class="bn-link" href="tasktracker.html">
+          <div class="holder">
+            <span class="material-icons">rule</span></br>
+            <p class="bn-p">Tracker</p>
+          </div>
+        </a>
+      </div>
+      <div id="grades">
+        <a class="bn-link" href="gradebook.html">
+          <div id="current" class="holder">
+            <span class="material-icons">menu_book</span></br>
+            <p class="bn-p">Grades</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- END of Footer Navigation Bar -->
+
+      <!----------------------------------------------->
+      <!-- JS: Boostrap, Firebase, API related    -->
+      <!----------------------------------------------->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+      </script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+      <script src="./scripts/firebase-api.js"></script>
+
+      <!--------------------------------------------------------------------->
+      <!-- JS files: Your own JavaScript functions included here    -->
+      <!--------------------------------------------------------------------->
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+        $(".accordion").accordion({
+          collapsible: true,
+          active: false,
+          heightStyle: "content"
+        });
+      </script>
+
+      <script src="./scripts/gradebook-scripts/course-display.js"></script>
+      <script src="./scripts/gradebook-scripts/grades-set.js"></script>
+      <script src="./scripts/logout.js"></script>
+      <script>
+        setGradec1100j1();
+        keepGradec1100j1();
+
+        setGradec1100j2();
+        keepGradec1100j2();
+
+        setGradec1100j3();
+        keepGradec1100j3();
+
+        setGradec1100j4();
+        keepGradec1100j4();
+
+        setGradec1100j5();
+        keepGradec1100j5();
+
+        setGradec1100j8();
+        keepGradec1100j8();
+
+        setGradec1100j9();
+        keepGradec1100j9();
+
+        setGradec1100j11();
+        keepGradec1100j11();
+
+        setGradec1100j12();
+        keepGradec1100j12();
+
+        setGradec1113q1();
+        keepGradec1113q1();
+
+        setGradec1113q2();
+        keepGradec1113q2();
+
+        setGradec1113q3();
+        keepGradec1113q3();
+
+        setGradec1113q4();
+        keepGradec1113q4();
+
+        setGradec1113q5();
+        keepGradec1113q5();
+
+        setGradec1113q6();
+        keepGradec1113q6();
+
+        setGradec1113a1();
+        keepGradec1113a1();
+
+        setGradec1113a2();
+        keepGradec1113a2();
+
+        setGradec1113a3();
+        keepGradec1113a3();
+
+        setGradec1113a4();
+        keepGradec1113a4();
+
+        setGradec1113a5();
+        keepGradec1113a5();
+
+        setGradec1113a6();
+        keepGradec1113a6();
+
+        setGradec1113a7();
+        keepGradec1113a7();
+
+        setGradec1113a8();
+        keepGradec1113a8();
+
+        setGradec1113a9();
+        keepGradec1113a9();
+
+        setGradec1113e1();
+        keepGradec1113e1();
+
+        setGradec1113e2();
+        keepGradec1113e2();
+
+        setGradec1116q1();
+        keepGradec1116q1();
+
+        setGradec1116q2();
+        keepGradec1116q2();
+
+        setGradec1116q3();
+        keepGradec1116q3();
+
+        setGradec1116q4();
+        keepGradec1116q4();
+
+        setGradec1116q5();
+        keepGradec1116q5();
+
+        setGradec1116q6();
+        keepGradec1116q6();
+
+        setGradec1116q7();
+        keepGradec1116q7();
+
+        setGradec1116d1();
+        keepGradec1116d1();
+
+        setGradec1116d2();
+        keepGradec1116d2();
+
+        setGradec1116d3();
+        keepGradec1116d3();
+
+        setGradec1116d4();
+        keepGradec1116d4();
+
+        setGradec1116d5();
+        keepGradec1116d5();
+
+        setGradec1116d6();
+        keepGradec1116d6();
+
+        setGradec1116d7();
+        keepGradec1116d7();
+
+        setGradec1116e();
+        keepGradec1116e();
+
+        setGradec1116ir();
+        keepGradec1116ir();
+
+        setGradec1116op();
+        keepGradec1116op();
+
+        setGradec1510q1();
+        keepGradec1510q1();
+
+        setGradec1510q2();
+        keepGradec1510q2();
+
+        setGradec1510q3();
+        keepGradec1510q3();
+
+        setGradec1510q4();
+        keepGradec1510q4();
+
+        setGradec1510q5();
+        keepGradec1510q5();
+
+        setGradec1510q6();
+        keepGradec1510q6();
+
+        setGradec1510q7();
+        keepGradec1510q7();
+
+        setGradec1510q8();
+        keepGradec1510q8();
+
+        setGradec1510q9();
+        keepGradec1510q9();
+
+        setGradec1510q10();
+        keepGradec1510q10();
+
+        setGradec1510q11();
+        keepGradec1510q11();
+
+        setGradec1510l1();
+        keepGradec1510l1();
+
+        setGradec1510l2();
+        keepGradec1510l2();
+
+        setGradec1510l3();
+        keepGradec1510l3();
+
+        setGradec1510l4();
+        keepGradec1510l4();
+
+        setGradec1510l5();
+        keepGradec1510l5();
+
+        setGradec1510l6();
+        keepGradec1510l6();
+
+        setGradec1510l7();
+        keepGradec1510l7();
+
+        setGradec1510l8();
+        keepGradec1510l8();
+
+        setGradec1510l9();
+        keepGradec1510l9();
+
+        setGradec1510l10();
+        keepGradec1510l10();
+
+        setGradec1510l11();
+        keepGradec1510l11();
+
+        setGradec1510a1();
+        keepGradec1510a1();
+
+        setGradec1510a2();
+        keepGradec1510a2();
+
+        setGradec1510a3();
+        keepGradec1510a3();
+
+        setGradec1510a4();
+        keepGradec1510a4();
+
+        setGradec1510e1();
+        keepGradec1510e1();
+
+        setGradec1510e2();
+        keepGradec1510e2();
+
+        setGradec1537l1();
+        keepGradec1537l1();
+
+        setGradec1537l2();
+        keepGradec1537l2();
+
+        setGradec1537l3();
+        keepGradec1537l3();
+
+        setGradec1537l4();
+        keepGradec1537l4();
+
+        setGradec1537l5();
+        keepGradec1537l5();
+
+        setGradec1537l6();
+        keepGradec1537l6();
+
+        setGradec1537l7();
+        keepGradec1537l7();
+
+        setGradec1537l8();
+        keepGradec1537l8();
+
+        setGradec1537l9();
+        keepGradec1537l9();
+
+        setGradec1537l10();
+        keepGradec1537l10();
+
+        setGradec1537e1();
+        keepGradec1537e1();
+
+        setGradec1537e2();
+        keepGradec1537e2();
+
+        setGradec1712q1();
+        keepGradec1712q1();
+
+        setGradec1712q2();
+        keepGradec1712q2();
+
+        setGradec1712q3();
+        keepGradec1712q3();
+
+        setGradec1712q4();
+        keepGradec1712q4();
+
+        setGradec1712a1();
+        keepGradec1712a1();
+
+        setGradec1712a2();
+        keepGradec1712a2();
+
+        setGradec1712a3();
+        keepGradec1712a3();
+
+        setGradec1712a4();
+        keepGradec1712a4();
+
+        setGradec1712a5();
+        keepGradec1712a5();
+
+        setGradec1712a6();
+        keepGradec1712a6();
+
+        setGradec1712a7();
+        keepGradec1712a7();
+
+        setGradec1712a8();
+        keepGradec1712a8();
+
+        setGradec1712a9();
+        keepGradec1712a9();
+
+        setGradec1712a10();
+        keepGradec1712a10();
+
+        setGradec1712e1();
+        keepGradec1712e1();
+
+        setGradec1712e2();
+        keepGradec1712e2();
+
+        setGradec1800ia1();
+        keepGradec1800ia1();
+
+        setGradec1800ia2();
+        keepGradec1800ia2();
+
+        setGradec1800ia3();
+        keepGradec1800ia3();
+
+        setGradec1800ia4();
+        keepGradec1800ia4();
+
+        setGradec1800ia5();
+        keepGradec1800ia5();
+
+        setGradec1800ia6();
+        keepGradec1800ia6();
+
+        setGradec1800ia7();
+        keepGradec1800ia7();
+
+        setGradec1800ta1();
+        keepGradec1800ta1();
+
+        setGradec1800ta2();
+        keepGradec1800ta2();
+
+        setGradec1800ta3();
+        keepGradec1800ta3();
+
+        setGradec1800ta4();
+        keepGradec1800ta4();
+
+        setGradec1800ta5();
+        keepGradec1800ta5();
+
+        setGradec1800ta6();
+        keepGradec1800ta6();
+
+        setGradec1800ta7();
+        keepGradec1800ta7();
+
+        setGradec1800ta8();
+        keepGradec1800ta8();
+
+        setGradec1800ta9();
+        keepGradec1800ta9();
+
+        setGradec1800ta10();
+        keepGradec1800ta10();
+
+        setGradec1800ala1();
+        keepGradec1800ala1();
+
+        setGradec1800ala2();
+        keepGradec1800ala2();
+
+        setGradec1800ala3();
+        keepGradec1800ala3();
+
+        setGradec1800ala4();
+        keepGradec1800ala4();
+
+        setGradec1800ala5();
+        keepGradec1800ala5();
+
+        setGradec1800ala6();
+        keepGradec1800ala6();
+
+        setGradec1800ala7();
+        keepGradec1800ala7();
+
+        setGradec1800ala8();
+        keepGradec1800ala8();
+
+        setGradec1800fp();
+        keepGradec1800fp();
+      </script>
+
+  </body>
+
+</html>

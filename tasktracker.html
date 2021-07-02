@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Better2Learn</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
+
+  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+  <!-- Optional styles and scripts of your own -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="styles/bottom-nav.css" rel="stylesheet" />
+  <link href="styles/tasktracker-styles/tasktrackerstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-------------------------------------->
+  <!-- The following is HTML for layout -->
+  <!-------------------------------------->
+
+  <!-- Header Navigation Bar -->
+
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="container-fluid d-flex flex-row">
+      <div class="justify-content-start">
+        <a href="index.html" class="nav-link">
+          <i class="material-icons align-middle px-3 justify-content-start">dashboard</i>
+        </a>
+      </div>
+      <span class="align-middle fs-3">BetterToLearn</span>
+      <div class="dropdown dropstart ">
+        <a class="nav-link justify-content-end" href="#" id="navbarDropdownMenuLink" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="material-icons">menu</span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="main.html">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" id="logout" href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- END of Header Navigation Bar -->
+
+  <!-- Page Contents -->
+
+  <div class="container">
+    <h1 class="trackertitle">Task Tracker</h1>
+
+    <div class="listcontainer">
+
+      <nav class="tabs">
+        <div class="nav nav-pills" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-how-tab" data-bs-toggle="tab" data-bs-target="#nav-how" type="button"
+            role="tab" aria-controls="nav-how" aria-selected="true">
+            <span class="material-icons">help_center</span><span class="tabname">Help</span></button>
+          <button class="nav-link" id="nav-todo-tab" data-bs-toggle="tab" data-bs-target="#nav-todo" type="button"
+            role="tab" aria-controls="nav-todo" aria-selected="false">
+            <span class="material-icons ">assignment</span><span class="tabname">To-do</span></button>
+          <button class="nav-link" id="nav-done-tab" data-bs-toggle="tab" data-bs-target="#nav-done" type="button"
+            role="tab" aria-controls="nav-done" aria-selected="false">
+            <span class="material-icons">assignment_turned_in</span><span class="tabname">Done</span></button>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+
+        <!-- Help tab -->
+        <div class="tab-pane fade show active" id="nav-how" role="tabpanel" aria-labelledby="nav-how-tab"><br />
+          <p class="fs-3 text-center">
+            <b>How do I use this?</b>
+          </p>
+          <p class="fs-5 text-center">&#9998; Add to-do items under the <b>'To-do'</b> tab.<br />
+            <br />&#9998; Specify start and finish times to each item to help plan your days.<br />
+            <br />&#10004; Once you've completed a task, move it to the <b>'Done'</b> tab by pressing the done
+            button.<br />
+            <br />&#10004; Completed items will tell you whether you were <b>early</b> or <b>late</b>.<br />
+            <br />&#128077; Use this tool to help <b>yourself</b> stay on track.<br />
+          </p>
+        </div>
+
+        <!-- To-do tab -->
+        <div class="tab-pane fade" id="nav-todo" role="tabpanel" aria-labelledby="nav-todo-tab"><br />
+          <p class="fs-3 text-center">
+            <b>To-do items</b>
+          </p>
+          <form id="inputtab" class="text-center">
+            <p class="fs-5">Task details</p>
+            <input type="text" size="46" id="newitem" name="itemtitle" placeholder="What do you need to do?" /><br />
+            <p> Start : <input type="date" id="newitemstartdate" name="itemstartdate" />
+              <input type="time" id="newitemstarttime" name="itemstarttime" /> </p>
+            <p> Due : <input type="date" id="newitemduedate" name="itemduedate" />
+              <input type="time" id="newitemduetime" name="itemduetime" /></p>
+            <input type="reset" value="Reset" />
+            <input type="submit" id="saveitem" value="Save" name="save" />
+          </form><br />
+          <div id="itemlist">
+          </div>
+        </div>
+
+        <!-- Done tab -->
+        <div class="tab-pane fade" id="nav-done" role="tabpanel" aria-labelledby="nav-done-tab"><br />
+          <p class="fs-3 text-center"><b>Completed Tasks</b></p>
+          <div id="donelist">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><br /><br />
+    <p class="text-center"> 2021 BetterToLearn </p>
+  </footer>
+
+  <!-- END of Page Contents -->
+
+  <!-- Footer Navigation Bar -->
+
+  <div id="bottom-nav">
+    <div id="home">
+      <a class="bn-link" href="main.html">
+        <div class="holder">
+          <span class="material-icons">home</span></br>
+          <p class="bn-p">Home</p>
+        </div>
+      </a>
+    </div>
+    <div id="calendar">
+      <a class="bn-link" href="schedule.html">
+        <div class="holder">
+          <span class="material-icons">calendar_today</span></br>
+          <p class="bn-p">Schedule</p>
+        </div>
+      </a>
+    </div>
+    <div id="tracker">
+      <a class="bn-link" href="tasktracker.html">
+        <div id="current" class="holder">
+          <span class="material-icons">rule</span></br>
+          <p class="bn-p">Tracker</p>
+        </div>
+      </a>
+    </div>
+    <div id="grades">
+      <a class="bn-link" href="gradebook.html">
+        <div class="holder">
+          <span class="material-icons">menu_book</span></br>
+          <p class="bn-p">Grades</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- END of Footer Navigation Bar -->
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./scripts/firebase-api.js"></script>
+
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+
+  <script src="./scripts/tasktracker-scripts/tasktracker.js"></script>
+  <script src="./scripts/logout.js"></script>
+
+</body>
+
+</html>

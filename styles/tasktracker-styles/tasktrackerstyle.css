@@ -1,0 +1,88 @@
+#nav-todo p {
+  margin: 5px;
+}
+
+body {
+  background-image: url(../../images/background.jpg);
+  background-repeat: repeat;
+}
+
+.container {
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.container .trackertitle {
+  text-align: center;
+  padding-top: 15px;
+}
+
+#nav-tab {
+  justify-content: center;
+}
+
+.tabs span {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.listcontainer {
+  padding: 1rem;
+}
+
+.container .material-icons {
+  font-size: 24px;
+}
+
+.footer {
+  height: 200px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: rgba(13, 110, 253, 0.75) !important;
+}
+
+.itemcard {
+  background-color: rgba(13, 110, 253, 0.30);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.itemcard h4,
+.itemcarddone h4 {
+  background-color: white;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.itemcard span {
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+.itemcard button,
+.itemcarddone button {
+  float: right;
+  border-style: none;
+  background-color: transparent;
+}
+
+.itemcarddone {
+  background-color: rgba(253, 149, 13, 0.3);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.itemcarddone span {
+  font-size: 14px;
+  padding-left: 15px;
+  text-decoration: line-through;
+}
+
+.resultstyle {
+  font-weight: bold;
+  text-decoration: none !important;
+}
